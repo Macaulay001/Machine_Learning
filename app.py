@@ -116,7 +116,7 @@ if st.button('Predict'):
     # Read descriptor list used in previously built model
     if receptor_mode=='Acetylcholinesterase':
         st.header('**Subset of descriptors from previously built Acetylcholinesterase models**')
-        Xlist = list(pd.read_csv('acetylcholine_descriptor_list.csv').columns)
+        Xlist = list(pd.read_csv('descriptor_list.csv').columns)
         desc_subset = desc[Xlist]
         st.write(desc_subset)
         st.write(desc_subset.shape)
