@@ -89,7 +89,7 @@ st.markdown("""
 This app allows you to predict the bioactivity towards inhibting several protein ligands and enzymes.
 
 **Credits**
-- App built in `Python` + `Streamlit` by Macaulay Oladimeji (aka Textbook)
+- App built in `Python` + `Streamlit` by the Nutritional and Industrial Biochemistry Laboratory, University of Ibadan
 - Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/) [[Read the Paper]](https://doi.org/10.1002/jcc.21707).
 - Data Professor
 ---
