@@ -124,7 +124,7 @@ if st.button('Predict'):
         desc_calc()
 
     # Read in calculated descriptors and display the dataframe
-    # st.header('**Calculated molecular descriptors**')
+    st.header('**Calculated molecular descriptors**')
     desc = pd.read_csv('descriptors_output.csv')
     input_column = dfs.iloc[:, 0:2]
     descs = pd.concat([desc, input_column], axis =1)
@@ -133,16 +133,16 @@ if st.button('Predict'):
     desc = descs.iloc[:, 0:882]
     dfss.reset_index(drop=True, inplace=True)
     desc.reset_index(drop=True, inplace=True)
-    # st.write(desc)
-    # st.write(desc.shape)
+    st.write(desc)
+    st.write(desc.shape)
 
     # Read descriptor list used in previously built model
     if receptor_mode=='Acetylcholinesterase':
         # st.header('**Subset of descriptors from previously built Acetylcholinesterase models**')
         Xlist = list(pd.read_csv('acetylcholinesterase_descriptor_list.csv').columns)
         desc_subset = desc[Xlist]
-        # st.write(desc_subset)
-        # st.write(desc_subset.shape)
+        st.write(desc_subset)
+        st.write(desc_subset.shape)
         # Apply trained model to make prediction on query compounds
         acetylcholinesterase_build_model(desc_subset)
     elif receptor_mode=='Glucagon Receptor':
